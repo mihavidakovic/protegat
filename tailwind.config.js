@@ -11,6 +11,9 @@ module.exports = {
       margin: {
         "22": "5.5rem",
       },
+      minHeight: {
+        "14": "3.5rem",
+      },
     },
     colors: {
       gray: colors.trueGray,

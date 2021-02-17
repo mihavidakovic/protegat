@@ -46,13 +46,13 @@ const content = [
     },
 ]
 
-export default function PremozenjskaZavarovanja() {
+export default function OsebnaZavarovanja() {
     
   return (
     <div className="flex flex-col min-h-screen">
       <div className="bg-gray-100 py-28 flex-auto">
         <div className="container">
-        <h2 className="font-semibold text-3xl text-gray-800 mb-4">Premoženjska zavarovanja</h2>
+        <h2 className="font-semibold text-3xl text-gray-800 mb-4">Osebna zavarovanja</h2>
             {content.map((item, i) => {
                 return (
                     <section key={i} className={i === content.length - 1 ? "w-full md:w-3/4" : "mb-4 w-full md:w-3/4 mb-6"}>
