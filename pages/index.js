@@ -4,7 +4,7 @@ import Swiper from '../components/Swiper'
 
 export default function Home() {
   return (
-    <div className="flex flex-col min-h-screen py-20 lg:py-28">
+    <div className="flex flex-col min-h-screen pt-20 lg:pt-26">
       <Swiper />
     </div>
   )

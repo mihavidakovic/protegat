@@ -26,7 +26,7 @@ const content = [
     },
     {
         title: "Zavarovanje avtodomov",
-        link: "/zavarovanja/premozenjska-zavarovanja/zavarovanje-avtomobilov",
+        link: "/zavarovanja/premozenjska-zavarovanja/zavarovanje-avtodomov",
         text: [
             "Število lastnikov avtodomov strmo narašča. Zato smo za vse, ki se na potovanja odpravljate z avtodomi, pripravili vrsto ugodnosti."
         ]

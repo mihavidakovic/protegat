@@ -2,67 +2,70 @@ import Head from 'next/head'
 
 const content = [
     {
-        title: "Življenjsko zavarovanje za primer smrti (ŽZS)",
+        title: "Vsebina zavarovanja",
         text: [
-            "Življenjsko zavarovanje za primer smrti zagotavlja izplačilo dogovorjene zavarovalne vsote v primeru smrti zavarovane osebe med trajanjem zavarovanja.",
-            "Zavarovanje ne vsebuje varčevalne komponente, zato je cenovno zelo ugodno. Priključite mu lahko tudi različna dodatna zavarovanja in s tem še povečate finančno varnost sebi in bližjim."
+            "Dopolnilno zdravstveno zavarovanje krije razliko med celotnimi stroški zdravstvenih storitev in stroški teh storitev, ki jih krije obvezno zdravstveno zavarovanje po zakonu, ki ureja obvezna zdravstvena zavarovanja.",
+            "Zavarovanje krije razliko za iste storitve in v istem časovnem obdobju, kot jih krije obvezno zdravstveno zavarovanje."
         ]
     },
     {
-        title: "Naložbeno življenjsko zavarovanje Fleks (NŽZ Fleks)",
+        title: "Obseg zavarovanja",
         text: [
-            "Naložbeno življenjsko zavarovanje Fleks je dolgoročno zavarovanje, pri katerem vam ni treba vnaprej opredeliti njegovega trajanja.",
-            "Namenjeno je osebam, ki se želijo zavarovati, obročno varčevati in dodatno investirati v sklade iz ponudbe Zavarovalnice Triglav, d.d. Višina zavarovalne vsote za primer smrti je zajamčena, izplačilo ob odkupu zavarovanja oziroma ob zahtevi za izplačilo celotne vrednosti premoženja na naložbenem računu pa je vezano na gibanje vrednosti enot premoženja izbranih skladov."
+            "Zavarovanje je brez omejitve zavarovalne vsote. Velja za območje Republike Slovenije.",
+            "Skladno z zakonodajo, ki ureja zdravstveno zavarovanje v Republiki Sloveniji in izvedbenimi akti, ki urejajo področje obveznega zdravstvenega zavarovanja, velja zavarovanje tudi v tujini."
         ]
     },
     {
-        title: "Življenjsko zavarovanje z varčevanjem (ŽZV)",
+        title: "Čakalna doba",
         text: [
-            "Življenjsko zavarovanje z varčevanjem je dolgoročno zavarovanje za primer smrti in hkrati varčevanje.",
-            "Namenjeno je osebam, ki želijo finančno zaščititi svoje bližnje in sebe ter hkrati varno varčevati. Ob sklenitvi zavarovanje lahko izbirate med dvemi oblikami kritja (ŽZV), in sicer med zavarovalno vsoto in štipendijo."
+            "Zavarovanje ima čakalno dobo treh mesecev, z izjemo tistih zavarovancev, ki nam bodo predložili potrdilo o tem, da niso bili več kot en mesec nezavarovani.",
         ]
     },
     {
-        title: "Naložbeno življenjsko zavarovanje Fleks za starejše",
+        title: "Zavarovalna premija",
         text: [
-            "Naložbeno življenjsko zavarovanje Fleks za starejše je kombinacija vlaganja v sklade, življenskega zavarovanja in dodatnega nezgodnega zavarovanja.",
-            "Fleks za starejše je naložba, ki predstavlja prilagodljivo varčevanje, vezano na gibanje vrednosti enot premoženja skladov, z dostopnimi zavarovalnimi premijami za starejše po 50. letu."
-        ]
-    },
-    {
-        title: "Naložbeno življenjsko zavarovanje Fleks za otroke",
-        text: [
-            "Naložbeno življenjsko zavarovanje Fleks za otroke je dolgoročno zavarovanje in varčevanje v korist otroka.",
-            "Odrasle osebe se zavarujejo za primer smrti in varčujejo v skladih iz ponudbe Zavarovalnice Triglav, d.d. Po 26. letu starosti lahko otrok prevzame vlogo zavarovane osebe na polici.."
-        ]
-    },
-    {
-        title: "Življenjsko zavarovanje za delovno nezmožnost",
-        text: [
-            "Življenjsko zavarovanje za delovno nezmožnost je zavarovanje za primer smrti, za primer popolne trajne nezmožnosti za delo ali hujšega stanja kot posledice nezgode ali bolezni.",
-            "Zavarovanje je namenjeno pokrivanju stroškov oskrbe in razlike med invalidsko pokojnino in plačo v aktivnem obdobju, v primeru smrti po pokritju najnujnejših stroškov.",
-            "Zavarovanje nima varčevalnega dela, zato je cenovno dostopno. Namenjeno je predvsem delovno aktivnemu prebivalstvu."
         ]
     },
 ]
 
 export default function ZdravstvenaZavarovanja() {
-    
-  return (
-    <div className="flex flex-col min-h-screen">
-      <div className="bg-gray-100 py-28 flex-auto">
-        <div className="container">
-        <h2 className="font-semibold text-3xl text-gray-800 mb-4">Zdravstvena zavarovanja</h2>
-            {content.map((item, i) => {
-                return (
-                    <section key={i} className={i === content.length - 1 ? "w-full md:w-3/4" : "mb-4 w-full md:w-3/4 mb-6"}>
-                        <p className="font-bold text-lg text-red-600 leading-8 mb-2">{item.title}</p>
-                        {item.text.map((itemText, i) => <p className="text-gray-800 leading-7 mb-2">{itemText}</p>)}
-                    </section>
-                )
-            })}
+
+    return (
+        <div className="flex flex-col min-h-screen">
+            <div className="bg-gray-100 py-28 flex-auto">
+                <div className="container">
+                    <h2 className="text-green-500 font-semibold text-3xl text-gray-800 mb-4">Dopolnilno zdravstveno zavarovanje</h2>
+                    <p className="text-gray-800 font-normal leading-7 mb-3">V okviru skupine Triglav smo posebej za vas pripravili ugodno ponudbo za dopolnilno zdravstveno zavarovanje.</p>
+                    {content.map((item, i) => {
+                        return (
+                            <section key={i} className={i === content.length - 1 ? "w-full md:w-3/4" : "mb-4 w-full md:w-3/4 mb-6"}>
+                                <p className="font-bold text-lg text-green-500 leading-8 mb-2">{item.title}</p>
+                                {item.text.map((itemText, i) => <p className="text-gray-800 leading-7 mb-2">{itemText}</p>)}
+                            </section>
+                        )
+                    })}
+                    <div className="bg-white border border-gray-300 flex flex-row flex-wrap w-full lg:w-1/2">
+                        <div className="w-1/2 bg-gray-50 font-bold text-center px-4 py-2 border-b border-r border-gray-300">
+                            PREMIJA
+                        </div>
+                        <div className="w-1/2 bg-gray-50 font-bold text-center px-4 py-2 border-b border-gray-300">
+                            PREMIJA (€)
+                        </div>
+                        <div className="w-1/2 px-4 py-2 border-b border-r border-gray-300">
+                            osnovna mesečna premija
+                        </div>
+                        <div className="w-1/2 px-4 py-2 text-center border-b border-gray-300">
+                            35,55
+                        </div>
+                        <div className="w-1/2 px-4 py-2 border-r border-gray-300">
+                            letna premija
+                        </div>
+                        <div className="w-1/2 px-4 py-2 text-center">
+                            426,60
+                        </div>
+                </div>
+            </div>
         </div>
-      </div>
-    </div>
-  )
+        </div >
+    )
 }
