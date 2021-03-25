@@ -48,24 +48,36 @@ const content = [
 ]
 
 export default function PremzenjskaZavarovanja() {
-    
-  return (
-    <div className="flex flex-col min-h-screen">
-      <div className="bg-gray-100 py-28 flex-auto">
-        <div className="container">
-        <h2 className="font-semibold text-3xl text-gray-800 mb-4">Premozenjska zavarovanja</h2>
-            {content.map((item, i) => {
-                return (
-                    <section key={i} className={i === content.length - 1 ? "w-full md:w-3/4" : "mb-4 w-full md:w-3/4 mb-6"}>
-                        <Link href={item.link}>
-                            <p className="font-bold text-lg text-red-600 leading-8 mb-2 cursor-pointer">{item.title}</p>
-                        </Link>
-                        {item.text.map((itemText, i) => <p className="text-gray-800 leading-7 mb-2">{itemText}</p>)}
-                    </section>
-                )
-            })}
-        </div>
-      </div>
-    </div>
-  )
+
+    return (
+        <>
+            <Head>
+                <title>Premoženjska zavarovanja - Protegat.si</title>
+                <meta name="viewport" content="initial-scale=1.0, width=device-width" />
+                <meta charset="utf-8" />
+                <meta name="description" content="Podjetje Protegat je ekskluzivna zavarovalno zastopniška družba, ki zastopa vodilno zavarovalnico v Sloveniji Zavarovalnico Triglav d.d. in Triglav, Zdravstveno zavarovalnico d.d." />
+
+                <meta property="og:title" content="Protegat.si" />
+                <meta property="og:type" content="website" />
+            </Head>
+
+            <div className="flex flex-col min-h-screen">
+                <div className="bg-gray-100 py-28 flex-auto">
+                    <div className="container">
+                        <h2 className="font-semibold text-3xl text-gray-800 mb-4">Premozenjska zavarovanja</h2>
+                        {content.map((item, i) => {
+                            return (
+                                <section key={i} className={i === content.length - 1 ? "w-full md:w-3/4" : "mb-4 w-full md:w-3/4 mb-6"}>
+                                    <Link href={item.link}>
+                                        <p className="font-bold text-lg text-red-600 leading-8 mb-2 cursor-pointer">{item.title}</p>
+                                    </Link>
+                                    {item.text.map((itemText, i) => <p className="text-gray-800 leading-7 mb-2">{itemText}</p>)}
+                                </section>
+                            )
+                        })}
+                    </div>
+                </div>
+            </div>
+        </>
+    )
 }

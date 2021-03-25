@@ -72,7 +72,7 @@ export default function Header() {
                    {MenuOpened ? <IoCloseOutline className="w-12 h-12" /> : <IoMenuOutline className="w-12 h-12" />}
                 </div>
                 <Link href="/">
-                    <img src="/img/logo.png" title="Protegat.si" className="w-56 relative z-20" />
+                    <img src="/img/logo.png" title="Protegat.si" className="w-56 relative z-20 cursor-pointer" />
                 </Link>
                 <div className={MenuOpened ? "transform translate-x-0 fixed top-0 left-0 w-full h-full bg-white flex flex-col pt-24 z-10 transition" : "transform -translate-x-full fixed top-0 left-0 w-full h-full bg-white flex flex-col pt-24 z-10 transition"}>
                     {pages.map((item, i) => {
@@ -131,7 +131,6 @@ export default function Header() {
                             "absolute w-0 h-0.5 bg-red-600 rounded-full transition-all",
                             {
                                 "absolute w-1/2 h-0.5 bg-red-600 rounded-full transition-all" : router.pathname === item.link,
-                                "absolute w-1/2 h-0.5 bg-red-600 rounded-full transition-all" : (router.pathname.includes("/zavarovanja/") && router.pathname === item.link)
                             }
                         )
                         return (
@@ -144,7 +143,8 @@ export default function Header() {
                                             return (
                                                 <Link href={item.link} key={i}>
                                                     <div className="group relative px-4 py-2 cursor-pointer  whitespace-nowrap">
-                                                        <span className={ router.pathname === item.link ? "text-gray-900 transition" : "text-gray-500 group-hover:text-gray-900 transition"}>{item.name}</span>
+                                                        <div className={(router.pathname === item.link) ? "absolute left-4 bottom-1 w-7 h-0.5 bg-red-600 rounded-full transition-all" : "absolute left-4 bottom-1 w-0 h-0.5 bg-red-600 rounded-full transition-all"}></div>
+                                                        <span className={ router.pathname === item.link ? "text-gray-900 transition" : "text-gray-400 group-hover:text-gray-600 transition"}>{item.name}</span>
                                                     </div>
                                                 </Link>
                                             )

@@ -1,4 +1,3 @@
-import Image from 'next/image'
 import Slider from "react-slick";
 import { useRef } from 'react';
 
@@ -20,7 +19,7 @@ function Swiper() {
     };
 
     return (
-        <Slider ref={sliderRef} {...settings} className="content-slider min-h-screen">
+        <Slider ref={sliderRef} {...settings} className="content-slider">
             <div className="slide-block">
                 <img src="/img/family.png" className="family opacity-0 lg:opacity-100" />
                 <div className="container">
